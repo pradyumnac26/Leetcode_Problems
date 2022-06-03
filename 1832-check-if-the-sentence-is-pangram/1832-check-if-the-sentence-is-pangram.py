@@ -9,3 +9,6 @@ class Solution:
         else :
             return False
         
+        
+        # return len(set(sentence)) == 26 %
+        
