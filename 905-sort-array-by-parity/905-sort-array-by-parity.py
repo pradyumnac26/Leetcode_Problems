@@ -7,7 +7,6 @@ class Solution:
                 b.append(i)
             else :
                 q.append(i)
-        for i in q :
-            b.append(i)
-        return b
+
+        return b+q
     
