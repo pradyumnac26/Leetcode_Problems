@@ -10,3 +10,4 @@ class Solution:
 
         return b+q
     
+    # A.sort(key = lambda x : x%2) as even number remainder will be 0 and for odd it is 1 , so sort it .
