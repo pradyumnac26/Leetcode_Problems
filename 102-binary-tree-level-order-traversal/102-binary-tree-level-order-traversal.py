@@ -10,6 +10,7 @@ class Solution:
             return []
         levelOrderVals = []
         queue = [root]
+        print(queue)
         while queue:
             level = []
             for _ in range(len(queue)):
