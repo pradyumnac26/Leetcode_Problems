@@ -7,4 +7,6 @@ class Solution:
             if i in nums2 :
                 l.append(i)
         return l
+    
+    #nums1.intersection(nums2)
         
