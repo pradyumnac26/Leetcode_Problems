@@ -2,7 +2,7 @@ class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
         ROWS, COLS = len(grid), len(grid[0])
         res = [[float(inf)] * (COLS + 1) for r in range(ROWS + 1)]
-        res[ROWS-1][COLS] = 0
+        res[ROWS][COLS-1] = 0
         
         for r in range(ROWS-1,-1,-1) :
             for c in range(COLS-1, -1, -1):
