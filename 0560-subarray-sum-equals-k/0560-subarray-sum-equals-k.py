@@ -1,15 +1,25 @@
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
-        count = 0
-        sums = 0
-        d = dict()
-        d[0] = 1
-        
-        for i in range(len(nums)):
-            sums += nums[i]
-            count += d.get(sums-k,0)
-            d[sums] = d.get(sums,0) + 1
-        
-        return(count)
+        n = len(nums) 
+        mpp = defaultdict(int)
+        preSum = 0
+        cnt = 0
+
+        mpp[0] = 1 # Setting 0 in the map.
+        for i in range(n):
+        # add current element to prefix Sum:
+            preSum += nums[i]
+
+        # Calculate x-k:
+            remove = preSum - k
+
+        # Add the number of subarrays to be removed:
+            cnt += mpp[remove]
+
+        # Update the count of prefix sum
+        # in the map.
+            mpp[preSum] += 1
+
+        return cnt
 
         
